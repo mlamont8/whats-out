@@ -4,6 +4,7 @@ $titleFont: "Montserrat", sans-serif;
 
 @import "./containers/Home/Home";
 @import "./components/Loader/Loader";
+@import "./components/FrontHeader/FrontHeader";
 
 body {
   background-color: #000000;

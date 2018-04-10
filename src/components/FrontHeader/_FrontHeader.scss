@@ -1,0 +1,30 @@
+.mainDividerTitle {
+  font-family: $titleFont;
+  font-size: 70px;
+  letter-spacing: -0.05em;
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
+  position: relative;
+  bottom: 30px;
+}
+
+.titleBlock {
+  height: 80px;
+  color: #ffffff;
+  padding: 35px;
+  margin-top: 275px;
+}
+
+.subTitle {
+  text-shadow: 1px 1px 2px black;
+  font-family: $titleFont;
+  font-size: 20px;
+  padding-top: 50px;
+  span {
+    padding: 30px;
+    letter-spacing: -0.05em;
+    a {
+      color: #fff;
+    }
+  }
+}

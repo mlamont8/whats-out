@@ -2,9 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { fetchFrontData } from "../../actions";
-// import MainDivider from '../components/home/MainDivider';
+import FrontHeader from "../../components/FrontHeader/FrontHeader";
 import Loader from "../../components/Loader/Loader";
-// import Footer from './FooterContainer';
+import Footer from "../../components/Footer/Footer";
 
 class Home extends React.Component {
   componentDidMount() {
@@ -21,7 +21,10 @@ class Home extends React.Component {
       <Loader />
     ) : (
       <div>
-        <div className="frontBackground" style={backgroundUrl} />
+        <div className="frontBackground" style={backgroundUrl}>
+          <FrontHeader />
+        </div>
+        <Footer />
       </div>
     );
   }
