@@ -17,8 +17,7 @@ const Main = () => (
           <Link to="/">Home</Link>
         </Menu>
       </div>
-      <hr />
-      <div className="row">
+      <div className="row content">
         <Switch>
           <Route exact path="/" component={Home} />
           <Redirect to="/" />

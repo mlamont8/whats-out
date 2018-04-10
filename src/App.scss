@@ -1,2 +1,10 @@
+$mainColor: #b71c1c;
+$secondaryColor: #ff8a80;
+$titleFont: "Montserrat", sans-serif;
+
 @import "./containers/Home/Home";
 @import "./components/Loader/Loader";
+
+body {
+  background-color: #000000;
+}
