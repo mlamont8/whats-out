@@ -8,6 +8,7 @@ import {
   Redirect
 } from "react-router-dom";
 import Home from "../Home/Home";
+import Browse from "../Browse/Browse";
 
 const Main = () => (
   <Router>
@@ -15,11 +16,13 @@ const Main = () => (
       <div className="row header">
         <Menu right noOverlay isOpen={false} width={175}>
           <Link to="/">Home</Link>
+          <Link to="/movies">Movies</Link>
         </Menu>
       </div>
       <div className="row content">
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/movies" component={Browse} />
           <Redirect to="/" />
         </Switch>
       </div>
