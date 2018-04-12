@@ -68,7 +68,7 @@ export function exploreHasErrored(bool) {
     };
 }
 
-export function exploreRequest() {
+export const exploreRequest = () => {
     return {
         type: 'EXPLORE_REQUEST',
 
@@ -84,6 +84,28 @@ export function fetchExploreData(type, page) {
                 if (!response.ok) {
                     throw Error(response.statusText);
                 }
+                return response;
+                
+            })
+            .then((response) => response.json()
+
+            )
+            .then((json) =>
+                dispatch(exploreFetchSuccess(json)))
+            .catch(() => dispatch(exploreHasErrored(true)));
+
+    }
+}
+
+export function browseType(type) {
+    return (dispatch) => {
+        dispatch(exploreRequest());
+        fetchJsonp(`https://api.themoviedb.org/3/${type}/popular?api_key=21b0daca9dad79653c91d176b7930bee&language=en-US&page=1`)
+            .then((response) => {
+                if (!response.ok) {
+                    throw Error(response.statusText);
+                }
+                console.log(response);
                 return response;
             })
             .then((response) => response.json()

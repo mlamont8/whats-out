@@ -16,13 +16,13 @@ const Main = () => (
       <div className="row header">
         <Menu right noOverlay isOpen={false} width={175}>
           <Link to="/">Home</Link>
-          <Link to="/movies">Movies</Link>
+          <Link to="/browse/movies">Movies</Link>
         </Menu>
       </div>
       <div className="row content">
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/movies" component={Browse} />
+          <Route path="/browse/:type" component={Browse} />
           <Redirect to="/" />
         </Switch>
       </div>

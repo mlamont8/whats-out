@@ -13,10 +13,10 @@ const FrontHeader = () => (
     <Row>
       <Col className="text-center subTitle" xs={12}>
         <span>
-          <Link to="/movies">Hot Movies</Link>
+          <Link to="/browse/movies">Hot Movies</Link>
         </span>
         <span>
-          <Link to="/explore/tv">Hot TV Shows</Link>
+          <Link to="/browse/tv">Hot TV Shows</Link>
         </span>
       </Col>
     </Row>
