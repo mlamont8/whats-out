@@ -16,7 +16,8 @@ const Main = () => (
       <div className="row header">
         <Menu right noOverlay isOpen={false} width={175}>
           <Link to="/">Home</Link>
-          <Link to="/browse/movies">Movies</Link>
+          <Link to="/browse/movie">Movies</Link>
+          <Link to="/browse/tv">TV Shows</Link>
         </Menu>
       </div>
       <div className="row content">

@@ -1,11 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
-import { browseType } from "../../actions";
+import { browseFetch } from "../../actions";
 
 class Browse extends React.Component {
-
-  componentDidMount(){
-    browseType(this.props.match.params.type);
+  componentDidMount() {
+    browseFetch(this.props.match.params.type);
   }
   render() {
     return (
@@ -17,10 +16,14 @@ class Browse extends React.Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  browseType: (media) => {
-    dispatch(browseType(media))
-  }
-})
+const mapStateToProps = state => ({
+  isLoading: state.isLoading
+});
 
-export default connect(null, mapDispatchToProps)(Browse);
+const mapDispatchToProps = dispatch => ({
+  browseFetch: media => {
+    dispatch(browseFetch(media));
+  }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Browse);

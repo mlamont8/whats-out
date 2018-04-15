@@ -1,17 +1,14 @@
-import { combineReducers } from 'redux'
-import front from './front'
-import searchTerm from './search'
-import exploreResults from './exploreData'
+import { combineReducers } from "redux";
+import front from "./front";
+import searchTerm from "./search";
+import exploreResults from "./exploreData";
+import isLoading from "./isLoading";
 
 const entApp = combineReducers({
+  front,
+  searchTerm,
+  exploreResults,
+  isLoading
+});
 
-
-
-    front,
-    searchTerm,
-    exploreResults
-
-
-})
-
-export default entApp
+export default entApp;
